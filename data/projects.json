@@ -1,0 +1,97 @@
+{
+  "projects": [
+    {
+      "id": "github-daily-trends",
+      "title": "GitHub Daily Trends",
+      "type": "web-app",
+      "description": "GitHubトレンドリポジトリの上位5件をLLMで自動解析し、日本語で解説を公開",
+      "longDescription": "11ty（Eleventy）を使用した静的サイトジェネレーターで構築。GitHub Actionsによる自動更新とLLMによる解説生成を組み合わせ、毎日のトレンドを分かりやすく日本語で提供。",
+      "skills": ["JavaScript", "11ty", "GitHub Actions", "Nunjucks", "CSS", "Static Site Generation"],
+      "achievements": [],
+      "links": {
+        "demo": "https://yo-ban.github.io/pages-test/",
+        "github": "https://github.com/yo-ban/pages-test",
+        "article": null
+      },
+      "media": {
+        "thumbnail": null,
+        "screenshots": [],
+        "video": null
+      },
+      "date": "2025-06-27",
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": "convertly",
+      "title": "Convertly",
+      "type": "web-app",
+      "description": "Next.js + Playwrightを使用したファイル変換ツール（SVG→PNG/JPEG、Markdown→PDF）",
+      "longDescription": "Next.jsのApp Routerとサーバーサイド処理を活用。Playwrightによる高品質な変換処理を実装し、日本語・絵文字対応、リアルタイムプレビュー機能を提供。",
+      "skills": ["TypeScript", "Next.js", "Playwright", "Node.js", "CSS", "Server-side Processing"],
+      "achievements": [],
+      "links": {
+        "demo": "https://convertly.apps.nk2t.com/",
+        "github": "https://github.com/yo-ban/converter-web",
+        "article": null
+      },
+      "media": {
+        "thumbnail": null,
+        "screenshots": [],
+        "video": null
+      },
+      "date": "2025-06-25",
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": "multi-llm-chat",
+      "title": "Multi-LLM Chat Application",
+      "type": "web-app",
+      "description": "複数のLLMと対話できるチャットUI（OpenAI、Anthropic、Google、xAI対応）",
+      "longDescription": "Vue 3とFastAPIで構築したフルスタックアプリケーション。リアルタイムストリーミング、画像入力、Web検索統合、MCPサーバーツール統合など高度な機能を実装。学習目的で開発。",
+      "skills": ["Vue 3", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Pinia"],
+      "achievements": [],
+      "links": {
+        "demo": null,
+        "github": "https://github.com/yo-ban/multi-llm-chat-app-vue-python",
+        "article": null
+      },
+      "media": {
+        "thumbnail": null,
+        "screenshots": [],
+        "video": null
+      },
+      "date": "2025-02-02",
+      "featured": true,
+      "status": "active"
+    }
+  ],
+  "projectTypes": {
+    "web-app": {
+      "label": "Webアプリケーション",
+      "icon": "🌐",
+      "color": "#0066cc"
+    },
+    "mobile-app": {
+      "label": "モバイルアプリ",
+      "icon": "📱",
+      "color": "#34c759"
+    },
+    "desktop-app": {
+      "label": "デスクトップアプリ",
+      "icon": "🖥️",
+      "color": "#5856d6"
+    },
+    "competition": {
+      "label": "コンペティション",
+      "icon": "🏆",
+      "color": "#ff9500"
+    },
+    "other": {
+      "label": "その他",
+      "icon": "✨",
+      "color": "#8e8e93"
+    }
+  }
+}

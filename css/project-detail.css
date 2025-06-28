@@ -1,0 +1,251 @@
+/* Project Detail Page Styles */
+
+.project-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #0066cc;
+}
+
+/* Project Header */
+.project-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.project-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Project Meta */
+.project-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.project-type::before {
+    content: "Type: ";
+    font-weight: 600;
+}
+
+.project-date::before {
+    content: "Date: ";
+    font-weight: 600;
+}
+
+.project-status {
+    padding: 0.25rem 0.75rem;
+    background: #f0f0f0;
+    border-radius: 16px;
+    font-size: 0.8rem;
+}
+
+.project-status.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.project-status.completed {
+    background: #e7f3ff;
+    color: #004085;
+}
+
+/* Achievements */
+.achievements-section {
+    margin-bottom: 1.5rem;
+}
+
+.achievement-large {
+    display: inline-flex;
+    align-items: center;
+    background: #fff3cd;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.achievement-large .achievement-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Project Links */
+.project-links-detail {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-links-detail a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.project-links-detail a:hover {
+    background: #0052a3;
+}
+
+/* Content Sections */
+.project-content section {
+    margin-bottom: 3rem;
+}
+
+.project-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.project-content h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Skills Grid */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-grid .skill-item {
+    background: #f5f5f5;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Media Section */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.media-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.media-item video {
+    width: 100%;
+    height: auto;
+}
+
+/* Project Navigation */
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.project-navigation a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.project-navigation a:hover {
+    opacity: 0.7;
+}
+
+.nav-back {
+    color: #666 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-detail {
+        padding: 1rem;
+    }
+    
+    .project-header h1 {
+        font-size: 2rem;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .project-meta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .project-links-detail {
+        flex-direction: column;
+    }
+    
+    .project-links-detail a {
+        text-align: center;
+    }
+    
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-navigation {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}

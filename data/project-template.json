@@ -1,0 +1,12 @@
+{
+  "id": "project-id-here",
+  "title": "プロジェクト名",
+  "description": "プロジェクトの説明を記入してください",
+  "tags": ["タグ1", "タグ2"],
+  "url": "https://your-project-url.com/",
+  "github": "https://github.com/username/repo",
+  "featured": false,
+  "date": "2024-06-28",
+  "thumbnail": null,
+  "_comment": "このテンプレートをコピーして、projects.jsonのprojects配列に追加してください"
+}

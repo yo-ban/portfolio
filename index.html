@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - nk2t</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">nk2t</h1>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>nk2t's Portfolio</h2>
+            <p class="subtitle">ソフトウェア開発とデータ分析の記録</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <h3>Projects & Works</h3>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">すべて</button>
+                    <button class="filter-btn" data-filter="web-app">Web</button>
+                    <button class="filter-btn" data-filter="mobile-app">Mobile</button>
+                    <button class="filter-btn" data-filter="competition">Competition</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                    <button class="filter-btn" data-filter="oss-contribution">OSS</button>
+                </div>
+            </div>
+            
+            <div class="project-grid">
+                <!-- Projects will be loaded dynamically -->
+                <div class="loading">読み込み中...</div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h3>Skills & Technologies</h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript/TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">React Native</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend & Infrastructure</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Data & ML</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h3>About</h3>
+            <p>ソフトウェア開発者として、Webアプリケーションやデータ分析ツールの開発を行っています。</p>
+            <p>新しい技術を学びながら、実用的なプロジェクトに取り組んでいます。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 nk2t. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/nk2t" target="_blank">GitHub</a>
+            <a href="https://twitter.com/nk2t" target="_blank">Twitter</a>
+            <a href="mailto:contact@nk2t.com">Contact</a>
+        </div>
+    </footer>
+    <script src="/js/portfolio.js"></script>
+</body>
+</html>

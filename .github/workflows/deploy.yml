@@ -1,0 +1,69 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/**'
+      - '**.html'
+      - '**.css'
+      - '**.js'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Validate JSON
+        run: |
+          echo "Validating projects.json..."
+          python -m json.tool data/projects.json > /dev/null
+          
+      - name: Build site
+        run: |
+          # Create build directory
+          mkdir -p _site
+          
+          # Copy all necessary files
+          cp -r *.html *.css js data css projects _site/ 2>/dev/null || true
+          
+          # Create assets directory structure
+          mkdir -p _site/assets/thumbnails _site/assets/screenshots
+          
+          # Generate sitemap
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > _site/sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> _site/sitemap.xml
+          echo '  <url><loc>https://nk2t.github.io/portfolio/</loc></url>' >> _site/sitemap.xml
+          echo '</urlset>' >> _site/sitemap.xml
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
